@@ -19,4 +19,24 @@ public class CategoriesServiceImp implements CategoriesService {
     public List<Categories> findAll() {
         return categoriesRepository.findAll();
     }
+
+    @Override
+    public boolean save(Categories catalog) {
+        return categoriesRepository.save(catalog);
+    }
+
+    @Override
+    public Categories findById(int catalogId) {
+        return categoriesRepository.findById(catalogId);
+    }
+
+    @Override
+    public boolean update(Categories catalog) {
+        return categoriesRepository.update(catalog);
+    }
+
+    @Override
+    public boolean delete(int catalogId) {
+        return categoriesRepository.delete(catalogId);
+    }
 }

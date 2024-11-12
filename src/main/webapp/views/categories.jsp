@@ -32,10 +32,14 @@
             <td>${catalog.catalogName}</td>
             <td>${catalog.description}</td>
             <td>${catalog.status?"Active":"Inactive"}</td>
-            <td></td>
+            <td>
+                <a href="CategoriesController?catalogId=${catalog.catalogId}&action=initUpdate">Update</a>
+                <a href="CategoriesController?catalogId=${catalog.catalogId}&action=delete">Delete</a>
+            </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
+<a href="CategoriesController?action=create">Create new categories</a>
 </body>
 </html>
